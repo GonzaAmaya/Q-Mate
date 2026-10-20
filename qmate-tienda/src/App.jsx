@@ -128,7 +128,7 @@ export default function App() {
           <nav className="qm-nav" aria-label="Principal">
             <button onClick={() => go("tienda")}>Tienda</button>
             <button onClick={() => go("nosotros")}>Nosotros</button>
-            <button onClick={() => go("contacto")}>Contacto</button>
+            {wa && <a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">Contacto</a>}
           </nav>
           <button className="qm-cartbtn" onClick={openCart}>Carrito ({count})</button>
         </div>
@@ -139,7 +139,7 @@ export default function App() {
           <div>
             <h1>El mate de todos los días, bien elegido.</h1>
             <p>Mates, bombillas, termos y yerbas seleccionados para acompañarte en la mañana, en el estudio y en la ruta.</p>
-            <button className="qm-cta" onClick={() => go("tienda")}>Ver la tienda</button>
+            <button className="qm-cta" onClick={() => go("tienda")} style={{color: "black"}}>Ver la tienda</button>
           </div>
           <div className="art"><Mate size={280} /></div>
         </div>
@@ -155,9 +155,9 @@ export default function App() {
             <button key={c} className="qm-chip" aria-pressed={cat === c} onClick={() => setCat(c)}>{c}</button>
           ))}
         </div>
-        <div className="qm-grid">
-          {list.map((p) => (
-            <article className="qm-card" key={p.id}>
+        <div className="qm-grid" key={cat}>
+            {list.map((p, i) => (
+            <article className="qm-card" key={p.id} style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}>
               <div className={`pic ${p.image_url ? "has" : ""}`}>
                 {p.image_url ? <img src={p.image_url} alt={p.name} loading="lazy" /> : <Mate size={110} />}
                 {p.stock <= 0 && <span className="qm-soldout">Sin stock</span>}
