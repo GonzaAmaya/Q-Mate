@@ -14,7 +14,7 @@ font-family:'Century Gothic','Futura','Trebuchet MS',sans-serif;color:var(--ink)
 .qm-hero>div{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
 .qm-hero h1{font-size:clamp(2.3rem,5.5vw,4rem);font-weight:400;line-height:1.08}
 .qm-hero p{margin:1.3rem 0 2rem;max-width:30rem;color:var(--mute);line-height:1.6}
-.qm-cta{background:var(--cream);color:var(--ink)!important;padding:.9rem 1.8rem;border-radius:99px;font-size:1rem}
+.qm-cta{background:var(--cream);color:white;padding:.9rem 1.8rem;border-radius:99px;font-size:1rem}
 .qm-cta:hover{background:#fff}
 .qm-hero .art{justify-self:center;animation:qmfloat 6s ease-in-out infinite}
 @keyframes qmfloat{50%{transform:translateY(-8px)}}
@@ -31,7 +31,7 @@ font-family:'Century Gothic','Futura','Trebuchet MS',sans-serif;color:var(--ink)
 .qm-card .price{font-size:1.2rem;margin-top:auto;padding-top:.5rem}
 .qm-card .sub{font-size:.82rem;color:#5e6a3a}
 .qm-add{background:var(--ink);color:var(--cream);border-radius:99px;padding:.65rem 1rem;margin-top:.7rem;font-size:.92rem}
-.qm-add:hover{background:#000}
+.qm-add:hover{background:#000; color:white}
 .qm-about{background:var(--ink);color:var(--cream)}
 .qm-about>div{max-width:1120px;margin:auto;padding:4.5rem 1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 .qm-about h2{font-size:2rem;font-weight:400}
@@ -60,7 +60,7 @@ font-family:'Century Gothic','Futura','Trebuchet MS',sans-serif;color:var(--ink)
 body{margin:0;background:#EFE6D4}
 .qm-card .pic{position:relative}
 .qm-card .pic.has{padding:0}
-.qm-card .pic img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.qm-card .pic img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block; height: 250px}
 .qm-soldout{position:absolute;top:.7rem;left:.7rem;background:var(--ink);color:var(--cream);font-size:.78rem;padding:.25rem .7rem;border-radius:99px}
 .qm-add:disabled,.qm-cta:disabled,.qm-qty button:disabled{opacity:.45;cursor:not-allowed}
 .qm-banner{padding:.8rem 1rem;text-align:center;font-size:.95rem}
