@@ -6,7 +6,7 @@ font-family:'Century Gothic','Futura','Trebuchet MS',sans-serif;color:var(--ink)
 .qm-promo{background:var(--moss);color:#1d2110;font-size:.85rem;text-align:center;padding:.55rem 1rem}
 .qm-head{background:var(--ink);color:var(--cream);position:sticky;top:0;z-index:20}
 .qm-head>div{max-width:1120px;margin:auto;display:flex;align-items:center;gap:2rem;padding:.7rem 1.25rem}
-.qm-brand{display:flex;align-items:center;gap:.6rem;font-size:1.35rem;letter-spacing:.02em}
+.qm-brand{display:flex;align-items:center;gap:.6rem;font-size:1.35rem;letter-spacing:.02em;cursor:pointer;color:inherit }
 .qm-nav{display:flex;gap:1.4rem;margin-left:auto;font-size:.95rem}
 .qm-nav button{opacity:.8}.qm-nav button:hover{opacity:1}
 .qm-cartbtn{border:1.5px solid var(--cream)!important;border-radius:99px;padding:.4rem 1rem;font-size:.9rem}
@@ -14,7 +14,7 @@ font-family:'Century Gothic','Futura','Trebuchet MS',sans-serif;color:var(--ink)
 .qm-hero>div{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
 .qm-hero h1{font-size:clamp(2.3rem,5.5vw,4rem);font-weight:400;line-height:1.08}
 .qm-hero p{margin:1.3rem 0 2rem;max-width:30rem;color:var(--mute);line-height:1.6}
-.qm-cta{background:var(--cream);color:white;padding:.9rem 1.8rem;border-radius:99px;font-size:1rem}
+.qm-cta{background:var(--cream);color:rgb(8, 7, 7);padding:.9rem 1.8rem;border-radius:99px;font-size:1rem}
 .qm-cta:hover{background:#fff; color: black; transition: all 0.3s ease-in-out}
 .qm-hero .art{justify-self:center;animation:qmfloat 6s ease-in-out infinite}
 @keyframes qmfloat{50%{transform:translateY(-8px)}}
@@ -116,3 +116,10 @@ body{margin:0;background:#EFE6D4}
 .qm-nav a:hover{opacity:1}
 .qm-hero{min-height:calc(100vh - 260px);display:flex;align-items:center}
 .qm-hero>div{width:100%}
+html,.qm-items,.qm-form{scrollbar-width:thin;scrollbar-color:#8a8272 #EFE6D4}
+
+@supports not (scrollbar-color:auto){
+  html::-webkit-scrollbar,.qm-items::-webkit-scrollbar,.qm-form::-webkit-scrollbar{width:8px}
+  html::-webkit-scrollbar-track{background:#EFE6D4}
+  html::-webkit-scrollbar-thumb,.qm-items::-webkit-scrollbar-thumb,.qm-form::-webkit-scrollbar-thumb{background:#8a8272;border-radius:99px}
+}

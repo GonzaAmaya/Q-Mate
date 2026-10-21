@@ -124,9 +124,12 @@ export default function App() {
 
       <header className="qm-head">
         <div>
-          <div className="qm-brand"><Mate size={30} />Q' Mate</div>
+          <button className="qm-brand" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Ir al inicio">
+            <Mate size={30} />Q' Mate
+          </button>
           <nav className="qm-nav" aria-label="Principal">
-            <button onClick={() => go("tienda")}>Tienda</button>
+            <button onClick={() => go("tienda")}>T
+              ienda</button>
             <button onClick={() => go("nosotros")}>Nosotros</button>
             {wa && <a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">Contacto</a>}
           </nav>
@@ -134,7 +137,7 @@ export default function App() {
         </div>
       </header>
 
-      <section className="qm-hero">
+      <section className="qm-hero" id= "hero">
         <div>
           <div>
             <h1>El mate de todos los días, bien elegido.</h1>
